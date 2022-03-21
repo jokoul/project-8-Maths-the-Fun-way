@@ -1,0 +1,385 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#container {
+  width: 90%;
+  /*border: 1px solid grey;*/
+  margin: 0 auto;
+}
+/*NAVBAR STYLE*/
+#header {
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 a {
+  font-size: 3rem;
+  font-weight: 100;
+  color: #861bbf;
+  text-decoration: none;
+}
+#searchBox {
+  background: linear-gradient(#e4f2b9, #b7e953);
+  background: -webkit-linear-gradient(#e4f2b9, #b7e953);
+  background: -o-linear-gradient(#e4f2b9, #b7e953);
+  background: -moz-linear-gradient(#e4f2b9, #b7e953);
+  width: 45%;
+  height: auto;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.formSearch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+.text {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.text input {
+  float: left;
+  width: 80%;
+  padding: 5px;
+  font-size: 15px;
+  color: #e36a0c;
+  border-radius: 5px;
+
+  /*background: white url("./images/search.png") right center no-repeat;*/
+}
+.text i {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  color: #861bbf;
+}
+.submit input {
+  padding: 5px;
+  margin-left: 1rem;
+  font-weight: bold;
+  color: white;
+  background: #861bbf;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.submit input:hover {
+  transform: scale(1.05);
+}
+@media screen and (max-width: 770px) {
+  #header {
+    flex-direction: column;
+  }
+  #searchBox {
+    margin-top: 1rem;
+    width: 70%;
+    padding: 0;
+  }
+  .formSearch {
+    flex-direction: column;
+  }
+  .text {
+    margin-top: 0.5rem;
+    width: 90%;
+  }
+  .submit input {
+    margin: 0.5rem 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  #searchBox {
+    width: 95%;
+  }
+}
+/*MENU STYLE*/
+.menuSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  background: linear-gradient(#f8f594, #d5d533);
+  background: -webkit-linear-gradient(#f8f594, #d5d533);
+  background: -moz-linear-gradient(#f8f594, #d5d533);
+  background: -o-linear-gradient(#f8f594, #d5d533);
+  border-radius: 10px;
+}
+ul {
+  list-style-type: none;
+}
+.menuSection ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+  width: 100%;
+}
+.menuSection li {
+  margin: 0 0.5rem;
+  padding: 0 1rem;
+  border-right: 0.2rem solid #5d12e7;
+}
+
+.menuSection li:last-child {
+  border-right: none;
+}
+
+.menuSection li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  line-height: 3rem;
+  color: #5d12e7;
+  -webkit-transition: font-size 0.3s ease; /*browser safari and ie*/
+  -moz-transition: font-size 0.3s ease;
+  -o-transition: font-size 0.3s ease;
+  transition: font-size 0.3s ease;
+}
+.menuSection li a:hover,
+.menuSection li a.active {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b314db;
+}
+@media screen and (max-width: 770px) {
+  .menuSection li {
+    margin: 0.5rem 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .menuSection ul {
+    flex-direction: column;
+  }
+}
+/* INTRODUCTION SECTION */
+.introductionSection {
+  background: linear-gradient(#e5f2bb, #b7e952);
+  background: -webkit-linear-gradient(#e4f2b9, #b7e953);
+  background: -o-linear-gradient(#e4f2b9, #b7e953);
+  background: -moz-linear-gradient(#e4f2b9, #b7e953);
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+}
+.introductionSection h2 {
+  font-size: 2.5rem;
+  color: #316901;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+.introductionSection p {
+  font-size: 1.2rem;
+  color: #316901;
+  font-weight: normal;
+  text-align: justify;
+}
+/*TUTORIAL SECTION*/
+.tutorialSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.sideBar {
+  width: 45%;
+  height: 25rem;
+  padding: 1rem;
+  border: 0.1rem solid grey;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem gray;
+}
+.sideBar h3 {
+  color: #b314db;
+  font-size: 2rem;
+}
+.sideBar ul li {
+  margin: 0.2rem 0 0 2.5rem;
+}
+#goTo ul li i {
+  font-size: 1rem;
+  margin-right: 1rem;
+  color: #e36a0c;
+}
+.sideBar ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #5d12e7;
+  -webkit-transition: font-size 0.5s ease; /*browser safari and ie*/
+  -moz-transition: font-size 0.5s ease;
+  -o-transition: font-size 0.5s ease;
+  transition: font-size 0.5s ease;
+}
+.sideBar ul li a:hover,
+.sideBar ul li a:active {
+  color: #b314db;
+  font-size: 1.3rem;
+}
+#whyUs ul li i {
+  font-size: 1rem;
+  margin-right: 1rem;
+  color: green;
+}
+@media screen and (max-width: 845px) {
+  .tutorialSection {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .sideBar {
+    width: 90%;
+    height: 20rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+/*FOOTER STYLE */
+.footer {
+  height: 5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(#f8f594, #d5d533);
+  background: -webkit-linear-gradient(#f8f594, #d5d533);
+  background: -moz-linear-gradient(#f8f594, #d5d533);
+  background: -o-linear-gradient(#f8f594, #d5d533);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.footer p {
+  font-size: 1.2rem;
+  color: #5d12e7;
+}
+/*LESSON STYLE*/
+.lessonSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+.imgWrapper {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgWrapper img {
+  width: 95%;
+}
+.lessonSection h2 {
+  font-size: 2rem;
+  color: #861bbf;
+}
+.lessonSection p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #861bbf;
+}
+.lessonSection strong {
+  font-weight: bold;
+}
+/*SIGNUP FORM STYLE*/
+.signupSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+.signupSection h2 {
+  font-size: 2rem;
+  color: #861bbf;
+}
+.signupSection form {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+  height: auto;
+  width: 90%;
+}
+.signupSection form div {
+  display: flex;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.signupSection form label {
+  flex: 1;
+  font-size: 1.2rem;
+  color: #861bbf;
+}
+.signupSection form input {
+  flex: 2;
+  margin-left: 1rem;
+  padding: 0.25rem;
+  font-size: 1.2rem;
+  color: #861bbf;
+}
+.signupSection form label[for="agreed"] {
+  flex: 20;
+  cursor: pointer;
+}
+.signupSection form input[type="checked"] {
+  flex: 1;
+}
+.signupSection form input[type="submit"] {
+  width: 100%;
+  cursor: pointer;
+}
+.signupSection form input:disabled {
+  opacity: 0.5;
+}
+.subscription {
+  font-size: 1.2rem;
+  color: #861bbf;
+}
+.subscription select {
+  font-size: 1.2rem;
+  color: #861bbf;
+  padding: 0.25rem;
+}
+.payment {
+  font-size: 1.2rem;
+  color: #861bbf;
+}
+.payment div {
+  flex: 2;
+}
+.payment div label {
+  margin: 0 0.25rem;
+}
+.payment p {
+  flex: 1;
+}
+.message {
+  flex: 2;
+  height: auto;
+  min-height: 10rem;
+}
+@media screen and (max-width: 450px) {
+  .signupSection form div {
+    display: flex;
+    flex-direction: column;
+  }
+  .signupSection form input {
+    margin: 0.5rem 0.5rem;
+  }
+}
