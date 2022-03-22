@@ -7,6 +7,10 @@ body {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
 }
+h2,
+h3 {
+  text-align: center;
+}
 #container {
   width: 90%;
   /*border: 1px solid grey;*/
@@ -82,6 +86,9 @@ h1 a {
   transform: scale(1.05);
 }
 @media screen and (max-width: 770px) {
+  h1 a {
+    font-size: 2rem;
+  }
   #header {
     flex-direction: column;
   }
@@ -162,10 +169,20 @@ ul {
   .menuSection li {
     margin: 0.5rem 0;
   }
+  .menuSection li a {
+    font-size: 1.1rem;
+  }
+  .menuSection li a:hover,
+  .menuSection li a.active {
+    font-size: 1.1rem;
+  }
 }
 @media screen and (max-width: 450px) {
   .menuSection ul {
     flex-direction: column;
+  }
+  .menuSection li {
+    border-right: none;
   }
 }
 /* INTRODUCTION SECTION */
@@ -242,7 +259,7 @@ ul {
   }
   .sideBar {
     width: 90%;
-    height: 20rem;
+    height: 27rem;
     margin-bottom: 1rem;
     padding: 0.5rem;
   }
@@ -374,6 +391,13 @@ ul {
   height: auto;
   min-height: 10rem;
 }
+.colorChange {
+  background: linear-gradient(#e4f2b9, #b7e953);
+  background: -webkit-linear-gradient(#e4f2b9, #b7e953);
+  background: -o-linear-gradient(#e4f2b9, #b7e953);
+  background: -moz-linear-gradient(#e4f2b9, #b7e953);
+  border-radius: 10px;
+}
 @media screen and (max-width: 450px) {
   .signupSection form div {
     display: flex;
@@ -381,5 +405,69 @@ ul {
   }
   .signupSection form input {
     margin: 0.5rem 0.5rem;
+  }
+}
+/*GET TUTOR STYLE*/
+.tutorSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+.tutorSection h2 {
+  font-size: 2rem;
+  color: #861bbf;
+  margin-bottom: 2rem;
+}
+.tutorSection h3 {
+  color: #861bbf;
+}
+.galleryTeacher {
+  display: grid;
+  /*grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));*/ /*No need to set responsive*/
+  align-items: center;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(4, 1fr); /*need to set responsive*/
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "a b c d"
+    "e f g h"
+    "i j k l"
+    "m n o p";
+}
+.galleryTeacher img {
+  width: 100%; /*fit the container*/
+}
+.galleryTeacher > a:nth-child(6) {
+  /* grid-column: span 2;
+  grid-row: span 2; */
+  grid-area: f/f/k/k; /*start point : column f, row f - end point column k, row k*/
+}
+.galleryTeacher > a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.galleryTeacher p {
+  text-decoration: none;
+  color: #861bbf;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .galleryTeacher {
+    grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+    grid-template-rows: initial;
+    grid-template-areas: initial;
+  }
+  .galleryTeacher > a:nth-child(6) {
+    grid-area: initial;
+  }
+  .tutorSection h3 {
+    display: none;
   }
 }

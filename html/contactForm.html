@@ -40,7 +40,7 @@
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../index.html#goTo">Online Tutorials</a></li>
-          <li><a href="#">Get a private tutor</a></li>
+          <li><a href="./tutor.html">Get a private tutor</a></li>
           <li><a href="./signupForm.html">Sign up</a></li>
           <li><a href="./contactForm.html" class="active">Contact us</a></li>
         </ul>
@@ -99,8 +99,10 @@
       checkbox.addEventListener("change", function () {
         if (this.checked) {
           submitBtn.disabled = false;
+          submitBtn.classList.add("colorChange");
         } else {
           submitBtn.disabled = true;
+          submitBtn.classList.remove("colorChange");
         }
       });
       function redirection() {

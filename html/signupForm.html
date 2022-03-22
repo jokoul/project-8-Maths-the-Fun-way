@@ -40,13 +40,13 @@
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../index.html#goTo">Online Tutorials</a></li>
-          <li><a href="#">Get a private tutor</a></li>
+          <li><a href="./tutor.html">Get a private tutor</a></li>
           <li><a href="./signupForm.html" class="active">Sign up</a></li>
           <li><a href="./contactForm.html">Contact us</a></li>
         </ul>
       </section>
       <section class="signupSection">
-        <h2>Sign up now</h2>
+        <h2>Join us now and enjoy Maths</h2>
         <form action="./signupFormValidation.html">
           <div>
             <label for="firstname">Name :</label>
@@ -117,8 +117,10 @@
       checkbox.addEventListener("change", function () {
         if (this.checked) {
           submitBtn.disabled = false;
+          submitBtn.classList.add("colorChange");
         } else {
           submitBtn.disabled = true;
+          submitBtn.classList.remove("colorChange");
         }
       });
       function redirection() {
