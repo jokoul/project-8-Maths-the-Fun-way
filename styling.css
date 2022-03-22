@@ -509,11 +509,11 @@ ul {
 #score {
   background-color: #f1ff92;
   color: #888e5f;
-  padding: 10px;
+  padding: 0.7rem;
   border-radius: 0.5rem;
   position: absolute;
   top: 1.2rem;
-  right: 1.5rem;
+  right: 5%;
   box-shadow: 0px 5px #9da853;
 }
 #correct {
@@ -525,7 +525,7 @@ ul {
   padding: 0.7rem;
   border-radius: 0.7rem;
   box-shadow: 0px 5px #005208;
-  display: none;
+  /* display: none; */
 }
 #wrong {
   position: absolute;
@@ -536,7 +536,7 @@ ul {
   padding: 0.7rem;
   border-radius: 0.5rem;
   box-shadow: 0px 5px #3a0c00;
-  display: none;
+  /* display: none; */
 }
 #question {
   background-color: #9da0ea;
@@ -627,7 +627,7 @@ ul {
   padding: 0.5rem;
   height: auto;
   position: absolute;
-  top: 27rem;
+  top: 27.25rem;
   right: 1rem;
   background-color: rgba(181, 235, 36, 0.8);
   border-radius: 0.5rem;
@@ -635,7 +635,7 @@ ul {
   -webkit-box-shadow: 0 5px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px rgba(0, 0, 0, 0.2);
   /* visibility: hidden; */ /*element still exist on the page and can interact with them*/
-  display: none; /*element does'nt exist anymore on the page and can not interact with other element*/
+  /* display: none; element does'nt exist anymore on the page and can not interact with other element */
 }
 #gameOver {
   width: 80%;
@@ -652,7 +652,66 @@ ul {
   z-index: 2;
   display: none;
 }
-@media screen and (max-width: 676px) {
-  #choices {
+@media screen and (max-width: 607px) {
+  #timeRemaining {
+    top: 33rem;
+  }
+  #correct {
+    left: 5%;
+  }
+  #wrong {
+    left: 5%;
+  }
+}
+@media screen and (max-width: 483px) {
+  #timeRemaining {
+    top: 30rem;
+    width: 90%;
+    left: 5%;
+  }
+  #gameOver {
+    height: 22rem;
+    top: 13%;
+    line-height: 5rem;
+    font-size: 2rem;
+  }
+  #startReset {
+    margin-top: 6rem;
+    width: 90%;
+  }
+  #question {
+    font-size: 3.5rem;
+    min-height: 5rem;
+  }
+}
+@media screen and (max-width: 359px) {
+  #timeRemaining {
+    top: 46.5rem;
+  }
+  #gameOver {
+    height: 35rem;
+    top: 15%;
+    line-height: 5rem;
+  }
+  #question {
+    margin-top: 7.5rem;
+  }
+  #score {
+    left: 5%;
+
+    right: initial;
+    width: 90%;
+  }
+  #correct {
+    left: 5%;
+    right: initial;
+    width: 90%;
+    top: 5rem;
+  }
+  #wrong {
+    left: 5%;
+    right: initial;
+    width: 90%;
+    top: 5rem;
   }
 }
