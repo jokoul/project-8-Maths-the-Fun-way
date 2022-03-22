@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Maths Website - tutorials</title>
+    <title>Maths Website - signup</title>
     <!--"user-scalable=yes" allow user to zoom-in and zoom-out -->
     <meta
       name="viewport"
@@ -39,33 +39,40 @@
       <section class="menuSection">
         <ul>
           <li><a href="../index.html">Home</a></li>
-          <li>
-            <a href="../index.html#goTo" class="active">Online Tutorials</a>
-          </li>
+          <li><a href="../index.html#goTo">Online Tutorials</a></li>
           <li><a href="./tutor.html">Get a private tutor</a></li>
-          <li><a href="./mathsGame.html">Maths Game</a></li>
+          <li><a href="./mathsGame.html" class="active">Maths Game</a></li>
           <li><a href="./signupForm.html">Sign up</a></li>
           <li><a href="./contactForm.html">Contact us</a></li>
         </ul>
       </section>
-      <section class="lessonSection">
-        <h2>Lesson 10 : Percent</h2>
-        <div class="imgWrapper">
-          <img src="../images/percent.svg" alt="numbers" />
-        </div>
-        <p>
-          In mathematics, a percentage (from Latin per centum "by a hundred") is
-          a number or ratio expressed as a fraction of 100. It is often denoted
-          using the percent sign, "%",[1] although the abbreviations "pct.",
-          "pct" and sometimes "pc" are also used.[2] A percentage is a
-          dimensionless number (pure number); it has no unit of measurement. For
-          example, 45% (read as "forty-five percent") is equal to the fraction
-          45 / 100 , the ratio 45:55 (or 45:100 when comparing to the total
-          rather than the other portion), or 0.45. Percentages are often used to
-          express a proportionate part of a total.
-        </p>
+      <section class="gameSection">
+        <h2>Mental calculation</h2>
+        <h3>Put in practice what your learn in the lessons</h3>
       </section>
-
+      <section class="gameBoard">
+        <div class="gameContainer">
+          <div id="score">Score : <span id="scoreValue">0</span></div>
+          <div id="correct">Correct</div>
+          <div id="wrong">Try again</div>
+          <div id="question">7x9</div>
+          <div id="instruction">Click on the correct answer</div>
+          <div id="choices">
+            <div class="box" id="box1">75</div>
+            <div class="box" id="box2">54</div>
+            <div class="box" id="box3">68</div>
+            <div class="box" id="box4">5</div>
+          </div>
+          <div id="startReset">Start Game</div>
+          <div id="timeRemaining">
+            Time remaining : <span id="timeRemainingValue">60</span> sec
+          </div>
+          <div id="gameOver">
+            <p>Game Over!</p>
+            <p>Your score is 28</p>
+          </div>
+        </div>
+      </section>
       <footer class="footer">
         <p>Maths the Fun way, Copyright &copy; 2022</p>
       </footer>
