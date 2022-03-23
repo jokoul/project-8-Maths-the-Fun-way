@@ -207,6 +207,12 @@ ul {
   font-weight: normal;
   text-align: justify;
 }
+@media screen and (max-width: 770px) {
+  .introductionSection h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
 /*TUTORIAL SECTION*/
 .tutorialSection {
   display: flex;
@@ -312,7 +318,7 @@ ul {
 .lessonSection strong {
   font-weight: bold;
 }
-/*SIGNUP FORM STYLE*/
+/*SIGNUP FORM STYLE AND CONTACT FORM STYLE*/
 .signupSection {
   display: flex;
   flex-direction: column;
@@ -342,10 +348,12 @@ ul {
   flex: 1;
   font-size: 1.2rem;
   color: #861bbf;
+  margin-right: 1rem;
 }
-.signupSection form input {
+.signupSection form input,
+.signupSection form textarea {
   flex: 2;
-  margin-left: 1rem;
+
   padding: 0.25rem;
   font-size: 1.2rem;
   color: #861bbf;
@@ -407,6 +415,7 @@ ul {
     margin: 0.5rem 0.5rem;
   }
 }
+
 /*GET TUTOR STYLE*/
 .tutorSection {
   display: flex;
@@ -489,6 +498,9 @@ ul {
 }
 .gameBoard {
   background: radial-gradient(circle, #fff, #ccc);
+  background: -webkit-radial-gradient(circle, #fff, #ccc);
+  background: -moz-radial-gradient(circle, #fff, #ccc);
+  background: -o-radial-gradient(circle, #fff, #ccc);
   height: auto;
   padding: 2rem;
 }
@@ -525,7 +537,7 @@ ul {
   padding: 0.7rem;
   border-radius: 0.7rem;
   box-shadow: 0px 5px #005208;
-  /* display: none; */
+  display: none;
 }
 #wrong {
   position: absolute;
@@ -536,7 +548,7 @@ ul {
   padding: 0.7rem;
   border-radius: 0.5rem;
   box-shadow: 0px 5px #3a0c00;
-  /* display: none; */
+  display: none;
 }
 #question {
   background-color: #9da0ea;
@@ -588,6 +600,7 @@ ul {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
 }
+/*
 .box:hover,
 #startReset:hover {
   background-color: #9c89f6;
@@ -595,7 +608,7 @@ ul {
   box-shadow: 0 5px #6b54d3;
   -webkit-box-shadow: 0 5px #6b54d3;
   -moz-box-shadow: 0 5px #6b54d3;
-}
+}*/
 .box:active,
 #startReset:active {
   box-shadow: 0 0px #6b54d3;
@@ -635,7 +648,7 @@ ul {
   -webkit-box-shadow: 0 5px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px rgba(0, 0, 0, 0.2);
   /* visibility: hidden; */ /*element still exist on the page and can interact with them*/
-  /* display: none; element does'nt exist anymore on the page and can not interact with other element */
+  display: none; /*element does'nt exist anymore on the page and can not interact with other element*/
 }
 #gameOver {
   width: 80%;
@@ -680,7 +693,7 @@ ul {
     width: 90%;
   }
   #question {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     min-height: 5rem;
   }
 }
@@ -714,4 +727,24 @@ ul {
     width: 90%;
     top: 5rem;
   }
+}
+
+/*PLAY SECTION STYLE*/
+.playSection {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.playSection a {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #861bbf;
+  font-weight: 700;
+  text-decoration: none;
+}
+.playSection a:hover {
+  border: 0.2rem solid #861bbf;
+  padding: 0.8rem;
 }
