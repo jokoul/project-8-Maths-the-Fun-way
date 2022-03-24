@@ -205,7 +205,7 @@ function generateQAAdd() {
     }
   }
 }
-//generate substraction question and multiple answers
+//generate subtraction question and multiple answers
 function generateQASub() {
   let x;
   let y;
