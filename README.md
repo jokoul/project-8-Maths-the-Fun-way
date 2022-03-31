@@ -8,4 +8,4 @@
 
 ## LAUNCH
 
-`https://joan-kouloumba.in/maths-tutorial/`
+<https://joan-kouloumba.in/maths-tutorial/>
